@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"github.com/gin-gonic/gin"
+	"github.com/madjiebimaa/fcc-timestamp-ms/handlers"
+	"github.com/madjiebimaa/fcc-timestamp-ms/middlewares"
 )
 
 func main() {
-	fmt.Println("Hello world!")
+	r := gin.New()
+	r.Use(middlewares.CORS())
+	r.GET("/api/:unix", handlers.UnixToUTCHandler)
+	r.Run(":3000")
 }

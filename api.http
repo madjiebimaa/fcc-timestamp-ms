@@ -1,0 +1,8 @@
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@baseURL = http://{{host}}/api
+
+# GET UTC from Unix
+GET {{baseURL}}/2022-2-8 HTTP/1.1
+
