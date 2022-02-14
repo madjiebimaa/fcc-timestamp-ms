@@ -1,4 +1,6 @@
-# ![Logo](https://i.ibb.co/YpvKyrK/Solution-1-Time-Stamp.png)
+<h1 align="center">
+  <img src="https://i.ibb.co/YpvKyrK/Solution-1-Time-Stamp.png" alt="Logo" width="600">
+</h1>
 
 ## Features
 
@@ -11,8 +13,6 @@
 ## Run Locally
 
 Here is the steps to run it with `golang`
-
-Clone the project
 
 ```bash
 # Move to directory
@@ -65,4 +65,4 @@ To run tests and get the percentage of code coverage, run the following command
 
 ## API Reference
 
-[Test API with REST Client Extension](https://github.com/madjiebimaa/fcc-timestamp/docs/apis)
+[Test API with REST Client Extension](https://github.com/madjiebimaa/fcc-timestamp-ms/tree/main/docs/apis)
