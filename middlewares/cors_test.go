@@ -11,15 +11,15 @@ import (
 )
 
 func TestCORS(t *testing.T) {
+	gin.SetMode(gin.TestMode)
+
 	req := httptest.NewRequest(http.MethodGet, "/", nil)
 	rec := httptest.NewRecorder()
+
 	c, r := gin.CreateTestContext(rec)
-
-	h := middlewares.CORS()
-
+	mid := middlewares.CORS()
 	r.ServeHTTP(rec, req)
-
-	h(c)
+	mid(c)
 
 	assert.Equal(t, "*", rec.Header().Get("Access-Control-Allow-Origin"))
 }

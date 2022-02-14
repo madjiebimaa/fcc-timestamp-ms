@@ -17,14 +17,7 @@ func UnixToUTCHandler(c *gin.Context) {
 
 		var date []int
 		for _, v := range s {
-			val, err := strconv.Atoi(v)
-			if err != nil {
-				c.JSON(http.StatusBadRequest, gin.H{
-					"message": "invalid url param value",
-				})
-				return
-			}
-
+			val, _ := strconv.Atoi(v)
 			date = append(date, val)
 		}
 

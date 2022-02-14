@@ -37,20 +37,20 @@ func TestUnixToUTC(t *testing.T) {
 		resBody    []byte
 	}{
 		{
-			name:       "success with unix param",
+			name:       "should return 200 status code when url param is unix value",
 			param:      unix,
 			statusCode: http.StatusOK,
 			resBody:    sucResBody,
 		},
 		{
-			name:       "success with date param",
+			name:       "should return 200 status code when url param is date value",
 			param:      date,
 			statusCode: http.StatusOK,
 			resBody:    sucResBody,
 		},
 		{
-			name:       "fail invalid param",
-			param:      "fail",
+			name:       "should return 400 status code when url param is not valid",
+			param:      "invalid",
 			statusCode: http.StatusBadRequest,
 			resBody:    failInvResBody,
 		},
