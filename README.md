@@ -12,6 +12,7 @@
 
 ## Run Locally
 
+**Your server is accessible in port 3000**
 Here is the steps to run it with `golang`
 
 ```bash
@@ -23,6 +24,9 @@ $ git clone https://github.com/madjiebimaa/fcc-timestamp-ms.git
 
 # Move to project
 $ cd fcc-timestamp-ms
+
+# Set gin to release mode
+$ export GIN_MODE=release
 
 # Run the application
 $ go run main.go
@@ -40,11 +44,11 @@ $ git clone https://github.com/madjiebimaa/fcc-timestamp-ms.git
 # Move to project
 $ cd fcc-timestamp-ms
 
-# Download and setup the image
-$ docker-compose up -d
+# Set gin to release mode
+$ export GIN_MODE=release
 
-# Run the application
-$ go run main.go
+# Download, setup, and run the image
+$ docker-compose up -d
 ```
 
 ## Running Tests

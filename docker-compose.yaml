@@ -1,0 +1,6 @@
+version: "3"
+services:
+  fcc-timestamp-ms:
+    image: madjiebimaa/fcc-timestamp-ms:v1
+    ports:
+      - 3000:3000
